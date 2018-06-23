@@ -7,12 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form action = "/todos" method = "POST">
+    <form action = "/todos" method = "POST"><!-- action tells where the form will go after submission
+    and method tells by what method will it go, post in this case -->
         <input name = "newtodo">
         <input type = "submit"> 
     </form>    
     <ul>
-        {{#each todoArr as |item|}}
+        {{#each todoArr as |item|}}<!-- each works as loop and will loop through each item(indexing)
+        of the todoArr array and set the list item as item.task -->
         <li>{{item.task}}</li>
         {{/each}}
     </ul>
